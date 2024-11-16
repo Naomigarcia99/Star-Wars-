@@ -1,15 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useGetStarshipsQuery } from "../slices/apiSlice";
+import { useSelector } from "react-redux";
 
 const StarshipDetails = () => {
   const { starshipName } = useParams();
-  const { data, error, isLoading } = useGetStarshipsQuery();
 
-  if (isLoading) return <p>Loading starships details...</p>;
-  if (error) return <p>Error loading starship details: {error.message}</p>;
-
-  const starship = data.results.find((e) => e.name === starshipName);
+  const starships = useSelector((state) => state.starships.starships);
+  const starship = starships.find((e) => e.name === starshipName);
 
   return (
     <div className="bg-gray-800">
