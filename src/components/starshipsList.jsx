@@ -42,9 +42,11 @@ const StarshipsList = () => {
     <div className="text-left">
       {starships.map((starship) => (
         <Link to={`/starship/${starship.name}`} key={starship.name}>
-          <div className="my-4 bg-gray-800">
-            <strong>{starship.name}</strong>
-            <div>{starship.model}</div>
+          <div className="my-4 bg-gray-800 h-20 w-3/4 mx-auto rounded-xl">
+            <div className="ml-3 space-y-2 pt-3">
+              <p className="font-semibold">{starship.name.toUpperCase()}</p>
+              <p>{starship.model}</p>
+            </div>
           </div>
         </Link>
       ))}
