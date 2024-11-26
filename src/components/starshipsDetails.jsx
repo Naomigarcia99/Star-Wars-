@@ -9,17 +9,35 @@ const StarshipDetails = () => {
   const starship = starships.find((e) => e.name === starshipName);
 
   return (
-    <div className="bg-gray-800 text-left mt-16 rounded-xl">
+    <div className="bg-gray-800 bg-opacity-75 text-left mt-16 rounded-xl w-3/5 mx-auto">
       <div className="ml-5 space-y-4 py-4">
-        <h1 className="font-bold text-orange-300 text-center">
+        <h1 className="font-bold text-orange-300 text-center mb-8">
           {starship.name}
         </h1>
-        <p>Model: {starship.model}</p>
-        <p>Manufacturer: {starship.manufacturer}</p>
-        <p>Cost in credits: {starship.cost_in_credits}</p>
-        <p>Length: {starship.length}</p>
-        <p>Atmospheric Speed: {starship.max_atmosphering_speed}</p>
-        <p>Crew: {starship.crew}</p>
+        <p>
+          <strong>Model: </strong>
+          {starship.model}
+        </p>
+        <p>
+          <strong>Manufacturer: </strong>
+          {starship.manufacturer}
+        </p>
+        <p>
+          <strong>Cost in credits: </strong>
+          {starship.cost_in_credits}
+        </p>
+        <p>
+          <strong>Length: </strong>
+          {starship.length}
+        </p>
+        <p>
+          <strong>Atmospheric Speed: </strong>
+          {starship.max_atmosphering_speed}
+        </p>
+        <p>
+          <strong>Crew: </strong>
+          {starship.crew}
+        </p>
       </div>
     </div>
   );
