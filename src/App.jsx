@@ -1,11 +1,11 @@
 import "./assets/App.css";
 import Logo from "./assets/images/sw2.png";
-import Login from "./components/login";
+import Login from "./pages/login";
 import Navbar from "./components/navbar";
-import Home from "./components/pages/home";
-import Register from "./components/register";
+import Home from "./pages/home";
+import Register from "./pages/register";
 import StarshipDetails from "./components/starshipsDetails";
-import StarshipsList from "./components/starshipsList";
+import StarshipsList from "./pages/starshipsList";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./utils/ProtectedRoute";
 
