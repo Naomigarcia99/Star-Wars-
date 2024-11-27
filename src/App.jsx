@@ -7,9 +7,7 @@ import Register from "./components/register";
 import StarshipDetails from "./components/starshipsDetails";
 import StarshipsList from "./components/starshipsList";
 import { Routes, Route } from "react-router-dom";
-import appFirebase from "./credentials";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-const auth = getAuth(appFirebase);
+import ProtectedRoute from "./utils/ProtectedRoute";
 
 function App() {
   return (
@@ -20,7 +18,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<StarshipsList />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <StarshipsList />
+            </ProtectedRoute>
+          }
+        ></Route>
         <Route path="/starship/:starshipName" element={<StarshipDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

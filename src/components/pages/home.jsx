@@ -9,7 +9,7 @@ export default function home() {
           On this page you will find information about the different Star Wars
           starships.
         </p>
-        <p> Click above on starships and start exploring the list.</p>
+        <p> Do login or register a new user to start exploring the starship list.</p>
       </div>
     </>
   );
