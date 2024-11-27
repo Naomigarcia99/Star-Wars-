@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function navbar() {
   return (
     <nav className="navbar">
-      <ul className="border-b">
+      <ul className="flex justify-center border-b">
         <NavLink
           to="/home"
           className={({ isActive }) =>
@@ -28,6 +28,24 @@ export default function navbar() {
           }
         >
           Starships
+        </NavLink>
+      </ul>
+      <ul className="flex ml-auto space-x-2">
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            `ml-auto ${isActive ? "font-bold text-orange-300" : ""}`
+          }
+        >
+          Login
+        </NavLink>
+        <NavLink
+          to="/register"
+          className={({ isActive }) =>
+            `ml-auto ${isActive ? "font-bold text-orange-300" : ""}`
+          }
+        >
+          Register
         </NavLink>
       </ul>
     </nav>
